@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOFA VERIFY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="logo.png" class="logo-img">
+            <div class="gov-text">UNITED ARAB EMIRATES<br><span>MINISTRY OF FOREIGN AFFAIRS</span></div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" onclick="toggleLanguage()"><i class="fa-solid fa-globe"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="container" id="main-ui">
+        <h1 id="mainTitle">MOFA VERIFY is a digital platform that enables instant verification of your "Digital Trusted Document". It verifies the authenticity, integrity and validity of the document from the official source.</h1>
+
+        <div class="badges-area">
+            <div class="badge gold-fill"><i class="fa-regular fa-circle-check"></i> <span id="b1">Secure</span></div>
+            <div class="badge gold-fill"><i class="fa-regular fa-circle-check"></i> <span id="b2">Tamper Proof</span></div>
+            <div class="badge gold-line"><i class="fa-solid fa-wave-square"></i> <span id="b3">Realtime</span></div>
+        </div>
+
+        <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+
+        <button class="custom-btn" onclick="executeSearch()" id="btnText">Search</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

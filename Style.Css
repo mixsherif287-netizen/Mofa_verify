@@ -1,0 +1,211 @@
+:root {
+    --mofa-gold: #b38e44;
+    --text-dark: #222;
+    --light-gray: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent; /* منع اللون الأزرق نهائياً */
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* --- الهيدر (ثابت إنجليزي دائماً) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--mofa-gold);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img { height: 48px; }
+
+.gov-text {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--mofa-gold);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- الأزرار وحركة التكبير --- */
+.icon-btn, .custom-btn {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: none;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #444;
+}
+
+.custom-btn {
+    width: 100%;
+    padding: 18px;
+    background: #fff;
+    border: 2px solid var(--mofa-gold);
+    color: var(--mofa-gold);
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* الأنيميشن عند الضغط */
+.icon-btn:active, .custom-btn:active {
+    transform: scale(1.15); /* يكبر 15% */
+}
+
+/* --- المحتوى --- */
+.container {
+    padding: 40px 25px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.badges-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.badge {
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gold-fill { background: var(--mofa-gold); color: #fff; }
+.gold-line { border: 2px solid var(--mofa-gold); color: var(--mofa-gold); }
+
+/* شريط البحث */
+.search-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.search-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* --- تنسيق الصفحة الثانية --- */
+.photo-box {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--mofa-gold);
+    padding-bottom: 20px;
+}
+
+.photo-box img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.data-field {
+    text-align: right; /* عربي */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--mofa-gold);
+}
+
+.data-field label {
+    display: block;
+    color: var(--mofa-gold);
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.data-field span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.word {
+    display: block;
+    text-align: center;
+    margin: 50px auto;      /* التباعد عن الهيدر وعن البيانات */
+    padding: 15px 30px;     /* مسافة جوه المربع عشان الكلام ميبقاش لازق في الخط */
+    
+    /* المربع (السترونك) */
+    border: 2px solid var(--mofa-gold); /* خط جولد حوالين الجملة */
+    border-radius: 8px;      /* دورانات بسيطة للمربع عشان يبقى احترافي */
+    
+    /* الشفافية */
+    background-color: transparent; /* أو opacity: 1 مع خلفية شفافة */
+    
+    /* عشان المربع مياخدش عرض الشاشة كله ويبقى على قد الكلمة */
+    width: fit-content; 
+    max-width: 90%;          /* عشان لو الشاشة صغيرة المربع ميتكسرش */
+    font-size: 40px;
+}
+ /* تنسيق الحاوية اللي شايلا الصورتين */
+.images-container {
+    display: flex;             /* السحر كله هنا عشان يجوا جنب بعض */
+    justify-content: center;   /* عشان يتوسطوا في نص الشاشة */
+    gap: 10px;                 /* مسافة صغيرة بين الصورتين */
+    width: 100%;               /* تاخد عرض الشاشة كله */
+    margin-top: 20px;          /* تبعد عن البيانات اللي فوقها */
+    padding: 0 5px;            /* تاتش بسيط عشان ميبقوش لازقين في حواف الشاشة */
+    box-sizing: border-box;
+}
+
+/* تنسيق الصور نفسها جوه الحاوية */
+.images-container img {
+    width: 48%;                /* كل صورة تاخد نص العرض تقريباً عشان يبقوا جنب بعض */
+    height: auto;              /* يحافظ على أبعاد الصورة متبقاش ممطوطة */
+    border-radius: 8px;        /* دوران خفيف للحواف عشان الشكل يبقى احترافي */
+    border: 1px solid #ddd;    /* إطار خفيف جداً يحدد الصورة */
+    object-fit: cover;         /* يضمن إن الصورة تملا المساحة بشكل شيك */
+}
